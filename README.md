@@ -6,7 +6,7 @@ Control volume levels on your computer easily, using predefined presets.
 
 Created using [Jetpack Compose for Desktop](https://www.jetbrains.com/lp/compose-desktop/)
 
-<!-- [**Download**](TODO) -->
+[**Download**](https://github.com/popovanton0/volume-presets/releases/latest)
 
 | Main Screen  | Settings Screen |
 | ------------- | ------------- |
