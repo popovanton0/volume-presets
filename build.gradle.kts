@@ -47,7 +47,7 @@ compose.desktop {
             description = "Control your volume levels easily, using presets"
             vendor = "Anton Popov"
             copyright = "Copyright (C) 2022, Anton Popov"
-            licenseFile.set(project.file("LICENSE.txt.txt"))
+            licenseFile.set(project.file("LICENSE.txt"))
             windows {
                 perUserInstall = true
             }
