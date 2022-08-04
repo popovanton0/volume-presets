@@ -22,7 +22,6 @@ import androidx.compose.ui.window.rememberWindowState
 import java.awt.Desktop
 import java.net.URL
 
-
 private data class Preset(val text: String) {
     val isValid: Boolean = run {
         val volumePreset = text.toUIntOrNull()
@@ -60,15 +59,7 @@ fun SettingsWindow(vm: ViewModel) {
                 Divider()
                 AudioDeviceNames(vm, strings)
                 Divider()
-                Text("${strings.settings_version} 1.0.0", style = MaterialTheme.typography.body2)
-                Text(strings.settings_createdBy, style = MaterialTheme.typography.body2)
-                Text(
-                    modifier = Modifier.clickable { openWebpage(strings.settings_githubLink) },
-                    text = strings.settings_githubLink,
-                    textAlign = TextAlign.Center,
-                    textDecoration = TextDecoration.Underline,
-                    color = MaterialTheme.colors.primary, style = MaterialTheme.typography.body2,
-                )
+                About(strings)
                 Divider()
 
                 Button(
@@ -91,6 +82,19 @@ fun SettingsWindow(vm: ViewModel) {
             )
         }
     }
+}
+
+@Composable
+private fun About(strings: Strings) {
+    Text("${strings.settings_version} 1.0.0", style = MaterialTheme.typography.body2)
+    Text(strings.settings_createdBy, style = MaterialTheme.typography.body2)
+    Text(
+        modifier = Modifier.clickable { openWebpage(strings.settings_githubLink) },
+        text = strings.settings_githubLink,
+        textAlign = TextAlign.Center,
+        textDecoration = TextDecoration.Underline,
+        color = MaterialTheme.colors.primary, style = MaterialTheme.typography.body2,
+    )
 }
 
 @Composable
