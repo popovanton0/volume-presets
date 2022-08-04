@@ -7,9 +7,6 @@ interface Strings {
     val setVolumeTitle: String
     val settingsButton: String
 
-    val settings_audioDevice: String
-    val settings_allAudioDevices: String
-
     val settings_language: String
     fun langName(lang: Lang): String
 
@@ -28,9 +25,6 @@ interface Strings {
 object RuStrings : Strings {
     override val setVolumeTitle: String = "Установить громкость на"
     override val settingsButton: String = "Настройки"
-
-    override val settings_audioDevice: String = "Аудиоустройство"
-    override val settings_allAudioDevices: String = "Все аудиоустройства"
 
     override val settings_language: String = "Язык: "
     override fun langName(lang: Lang) = when (lang) {
@@ -52,9 +46,6 @@ object RuStrings : Strings {
 object EnStrings : Strings {
     override val setVolumeTitle: String = "Set volume at"
     override val settingsButton: String = "Settings"
-
-    override val settings_audioDevice: String = "Audio Device"
-    override val settings_allAudioDevices: String = "All audio devices"
 
     override val settings_language: String = "Language: "
     override fun langName(lang: Lang) = when (lang) {

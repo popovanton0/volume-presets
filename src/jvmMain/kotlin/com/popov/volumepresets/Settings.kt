@@ -44,7 +44,7 @@ fun SettingsWindow(vm: ViewModel) {
         state = rememberWindowState(size = DpSize(400.dp, 800.dp))
     ) {
         Box(
-            modifier = Modifier.fillMaxSize().background(MaterialTheme.colors.background),
+            modifier = Modifier.background(MaterialTheme.colors.background).fillMaxSize(),
             contentAlignment = Alignment.Center
         ) {
             val scrollState = rememberScrollState()
@@ -56,8 +56,6 @@ fun SettingsWindow(vm: ViewModel) {
                 LanguageSetting(strings, vm)
                 Divider()
                 PresetsSetting(volumePresets, strings)
-                Divider()
-                AudioDeviceNames(vm, strings)
                 Divider()
                 About(strings)
                 Divider()
@@ -95,34 +93,6 @@ private fun About(strings: Strings) {
         textDecoration = TextDecoration.Underline,
         color = MaterialTheme.colors.primary, style = MaterialTheme.typography.body2,
     )
-}
-
-@Composable
-private fun AudioDeviceNames(vm: ViewModel, strings: Strings) = Column(
-    horizontalAlignment = Alignment.Start,
-    verticalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterVertically)
-) {
-    val audioDeviceNames = remember { vm.getAudioDeviceNames() }
-    Text(modifier = Modifier.align(Alignment.CenterHorizontally), text = strings.settings_audioDevice)
-
-    val currentVolumeControlName by vm.volumeControlName.collectAsState()
-
-    Row(
-        modifier = Modifier.clickable { vm.volumeControlName.value = null },
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        RadioButton(selected = currentVolumeControlName == null, onClick = null)
-        Text(modifier = Modifier.padding(4.dp), text = strings.settings_allAudioDevices)
-    }
-    audioDeviceNames.forEach { name ->
-        Row(
-            modifier = Modifier.clickable { vm.volumeControlName.value = name },
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            RadioButton(selected = currentVolumeControlName == name, onClick = null)
-            Text(modifier = Modifier.padding(4.dp), text = name)
-        }
-    }
 }
 
 @Composable

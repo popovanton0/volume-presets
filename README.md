@@ -8,7 +8,7 @@ Created using [Jetpack Compose for Desktop](https://www.jetbrains.com/lp/compose
 
 [**Download**](https://github.com/popovanton0/volume-presets/releases/latest)
 
-| Main Screen  | Settings Screen |
-| ------------- | ------------- |
-| <img width="400" src="media/1.png" alt="Main Screen">  | <img width="400" src="media/2.png" alt="Settings Screen">  |
+| Main Screen                                           | Settings Screen |
+|-------------------------------------------------------| ------------- |
+| <img width="450" src="media/1.png" alt="Main Screen"> | <img width="400" src="media/2.png" alt="Settings Screen">  |
 

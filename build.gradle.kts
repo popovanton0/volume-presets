@@ -48,6 +48,7 @@ compose.desktop {
             vendor = "Anton Popov"
             copyright = "Copyright (C) 2022, Anton Popov"
             licenseFile.set(project.file("LICENSE.txt"))
+            appResourcesRootDir.set(project.layout.projectDirectory.dir("resources"))
             windows {
                 perUserInstall = true
             }
