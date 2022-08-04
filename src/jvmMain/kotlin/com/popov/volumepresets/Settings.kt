@@ -84,7 +84,7 @@ fun SettingsWindow(vm: ViewModel) {
 
 @Composable
 private fun About(strings: Strings) {
-    Text("${strings.settings_version} 1.0.0", style = MaterialTheme.typography.body2)
+    Text("${strings.settings_version} 1.1.0", style = MaterialTheme.typography.body2)
     Text(strings.settings_createdBy, style = MaterialTheme.typography.body2)
     Text(
         modifier = Modifier.clickable { openWebpage(strings.settings_githubLink) },
